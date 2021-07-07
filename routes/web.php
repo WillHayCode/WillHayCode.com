@@ -19,7 +19,7 @@ use App\Http\Controllers\HomeController;
 Route::domain('{subdomain}.localhost')->group(function () {
     Route::get('/', function($account) {
         return $account;
-    });););
+    });
 });
     
 Route::get('/', 'App\Http\Controllers\HomeController@showHome');
