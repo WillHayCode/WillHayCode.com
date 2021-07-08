@@ -6,9 +6,10 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller {
+class PageController extends Controller {
 
-    public function showHome(Request $request) {
+    public function showPage(Request $request, $subdomain, $slug = '') {
+        return view('home');
         $repos = DB::select('SELECT * FROM github_repos');
 
         $sorted = array();
